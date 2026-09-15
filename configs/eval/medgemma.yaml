@@ -1,0 +1,19 @@
+model:
+  family: medgemma
+  model_id: google/medgemma-4b-it
+  checkpoint: null
+  torch_dtype: bfloat16
+  attn_implementation: flash_attention_2
+  trust_remote_code: true
+
+data:
+  path: data/processed/pad/clinical_context
+  split: test
+  max_length: 4096
+
+generation:
+  max_new_tokens: 128
+  temperature: 0.0
+  do_sample: false
+
+output_dir: outputs/eval/medgemma

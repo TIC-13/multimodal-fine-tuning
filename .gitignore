@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+*.manifest
+*.spec
+
+# Test / lint / type check
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# Virtual environments
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.python-version
+
+# IDE / editor
+.idea/
+.vscode/
+.cursor/
+*.code-workspace
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Project data & outputs
+/data/
+outputs/
+runs/
+checkpoints/
+
+# ML artifacts
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+*.onnx
+
+# Experiment tracking
+wandb/
+trackio/
+mlruns/
+lightning_logs/
+
+# Hugging Face / caches
+.cache/
+.huggingface/
+hf_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs / TensorBoard
+*.log
+events.out.tfevents.*
+
+# Local notes / papers
+todo
+todo.md
+docs/reference_papers/
+reference_papers/
+
+docs/

@@ -1,0 +1,37 @@
+model:
+  family: medgemma
+  model_id: google/medgemma-4b-it
+  torch_dtype: bfloat16
+  attn_implementation: flash_attention_2
+  trust_remote_code: true
+
+method: full
+
+trainable:
+  llm: true
+  projector: true
+  encoder: false
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: auto
+
+data:
+  root: data
+  max_length: 4096
+  information_rate: 1.0
+
+training:
+  output_dir: outputs/medgemma-full
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  learning_rate: 1.0e-5
+  num_train_epochs: 1
+  logging_steps: 10
+  save_steps: 200
+  eval_steps: 200
+  bf16: true
+  gradient_checkpointing: true
+  report_to: tensorboard
